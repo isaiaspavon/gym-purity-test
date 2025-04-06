@@ -73,8 +73,46 @@ const gymQuestions: string[] = [
     "Worn a pump cover and took it off dramatically mid-lift?",
     // Questions added in V6
     "Started flexing at a party",
-    
-    // Add more later!
+    // Questions added in V7
+    "Thought protein stops working if you don’t drink it within 30 minutes post-lift?",
+    "Believed creatine was basically steroids?",
+    "Did curls in the squat rack 'because the pump hits better'?",
+    "Claimed lifting heavy burns more fat than cardio?",
+    "Thought doing abs every day would give you a six-pack faster?",
+    "Convinced someone that soreness = muscle growth?",
+    "Used BCAAs because your favorite YouTuber said so?",
+    "Believed more sweat = more fat loss?",
+    "Skipped leg day because 'you get enough leg work walking around'",
+    "Told someone you didn’t need to warm up because you’re 'built different'?",
+    // Questions added in V8
+    "Posted a Darc Sport caption like you're battling inner demons?",
+    "Owned more YoungLA than actual food in your fridge?",
+    "Worn a Gymshark fit and felt like a sponsored athlete?",
+    "Used 'it’s not just a gym, it’s therapy' unironically?",
+    "Made an Instagram reel with a sad song and a lifting montage?",
+    "Planned your pump cover to match your mood?",
+    "Let your outfit determine how heavy you lifted that day?",
+    "Used your gym fit as an excuse to take mirror selfies, not lift?",
+    "Made someone film your set just to post a failed PR?",
+    "Trained with sunglasses on indoors because you were 'locked in'?",
+    // Questions added in V9
+    "Explained your gym schedule as a reason you can’t date?",
+    "Put lifting PRs in your Tinder or Bumble bio?",
+    "Claimed your ex was the reason for your glow-up in the gym?",
+    // Questions added in V10
+    "Drank raw eggs as a joke… or not?",
+    "Yelled 'lightweight baby!' like Ronnie Coleman in public?",
+    // Questions added in V11
+    "Has actually gone up to their gym crush",
+    "Gotten into a relationship because of the gym",
+    "Gotten into a breakup because of the gym",
+    "Forgotten to take creatine",
+    "Skips cardio because of bulk",
+    "Does cardio to lean out",
+    "Saves cardio for bulk",
+    "Gotten chipotle after a workout",
+    "Fails a lift trying to impress someone",
+    "Shoots shot with gym crush by looking at them",
   ];
   
   export default gymQuestions;
