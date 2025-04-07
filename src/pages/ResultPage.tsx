@@ -17,7 +17,10 @@ const ResultPage: React.FC<Props> = ({ score, onRestart }) => {
     <div>
       <h2>Your Gym Purity Score</h2>
       <p>
-        {score} / 50 — {getPersonality(score)}
+        {score}
+      </p>
+      <p>
+      {getPersonality(score)}
       </p>
       <button onClick={onRestart}>Retake Quiz</button>
     </div>

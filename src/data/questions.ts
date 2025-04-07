@@ -56,7 +56,7 @@ const gymQuestions: string[] = [
   "Posted shirtless gym selfie on IG?",
   "Put lifting PRs in your Tinder or Bumble bio?",
   "Said 'it’s just a deload week' but really just didn’t want to lift?",
-  "Saves cardio for bulk",
+  "Saves cardio for 'home' ",
   "Screamed during a deadlift?",
   "Shit yourself on a lift (or came close)?",
   "Shoots shot with gym crush by looking at them",
@@ -102,6 +102,12 @@ const gymQuestions: string[] = [
   "Worn a belt for every single lift (even curls)?",
   "Worn a pump cover and took it off dramatically mid-lift?",
   "Yelled 'lightweight baby!' like Ronnie Coleman in public?",
+
+  // Add something about:
+  // Grunting
+  // Dark energy 
+  // Work out at 3am
+  // Went to the gym straight for a week (no rest days).
 ];
 
 export default gymQuestions;

@@ -20,7 +20,13 @@ const QuizPage: React.FC<Props> = ({ onFinish }) => {
 
   return (
     <div>
-      <h2>Gym Purity Test</h2>
+      <h2 className="branding">The Gym Purity Test</h2>
+      <p className="subtagline">How unhinged is your fitness journey?</p>
+
+      <p>{selectedCount} / {gymQuestions.length} questions checked</p>
+      <progress value={selectedCount} max={gymQuestions.length}></progress>
+
+
       {gymQuestions.map((q, i) => (
         <QuestionCard key={i} index={i} question={q} onChange={handleChange} />
       ))}
