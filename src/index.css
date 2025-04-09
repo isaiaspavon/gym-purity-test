@@ -100,6 +100,42 @@ progress::-webkit-progress-value {
   background: #ff3c3c;
 }
 
+/* Dark/Light mode */
+body.light-mode {
+  background: white;
+  color: black;
+}
+
+body.light-mode .App {
+  background: #f4f4f4;
+}
+
+body.light-mode .question-card {
+  background: #e0e0e0;
+}
+
+
+
+/* Responsive UI*/
+@media (max-width: 768px) {
+  .App {
+    padding: 1rem;
+  }
+
+  .branding {
+    font-size: 2rem;
+  }
+
+  .question-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
 /* 
 
 .result-card {
