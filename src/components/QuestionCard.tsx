@@ -9,11 +9,17 @@ type Props = {
 
 const QuestionCard: React.FC<Props> = ({ question, index, onChange }) => {
   return (
-    <div className="question-card" style={{ display: "flex", alignItems: "center", gap: "0.5rem", margin: "0.5rem 0" }}>
+    <motion.div
+      className="question-card"
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.2 }}
+      style={{ display: "flex", alignItems: "center", gap: "0.5rem", margin: "0.5rem 0" }}
+    >
       <span style={{ width: "2rem", textAlign: "right" }}>{index + 1}.</span>
       <input type="checkbox" onChange={(e) => onChange(e.target.checked)} />
       <label>{question}</label>
-    </div>
+    </motion.div>
   );
 };
 
