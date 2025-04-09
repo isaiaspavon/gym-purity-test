@@ -9,7 +9,7 @@ body {
   min-height: 100vh;
 }
 
-.App {
+.App{
   max-width: 700px;
   padding: 2rem;
   margin-top: 2rem;
@@ -127,6 +127,7 @@ body.light-mode button {
 @media (max-width: 768px) {
   .App {
     padding: 1rem;
+    margin: 0;
   }
 
   .branding {
@@ -140,8 +141,40 @@ body.light-mode button {
 
   button {
     width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .result-card {
+    max-width: 90vw;
+    height: auto;
   }
 }
+
+
+.result-card {
+  background: #1e1e1e;
+  border: 2px dashed #ff3c3c;
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 12px;
+  max-width: 360px;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.result-card h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.result-card p {
+  font-size: 1.6rem;
+}
+
 
 /* 
 
