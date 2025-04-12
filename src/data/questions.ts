@@ -8,7 +8,7 @@
 
 
 const gymQuestions: string[] = [
-  "Believed creatine was basically steroids?",
+  "Believed creatine was basically steroids?", 
   "Believed more sweat = more fat loss?",
   "Blamed your spotter for a failed rep?",
   "Bought a fitness program because the guy was shredded?",
