@@ -155,7 +155,7 @@ body.light-mode button {
   background: #1e1e1e;
   border: 2px dashed #ff3c3c;
   padding: 2rem;
-  margin: 2rem 0;
+  margin: 2rem auto;
   border-radius: 12px;
   max-width: 360px;
   height: 640px;
@@ -165,6 +165,7 @@ body.light-mode button {
   align-items: center;
   text-align: center;
 }
+
 
 .result-card h2 {
   font-size: 2.2rem;
