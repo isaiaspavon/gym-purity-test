@@ -3,6 +3,10 @@ import html2canvas from "html2canvas";
 import { motion } from "framer-motion";
 import ConfettiBurst from "../components/ConfettiBurst";
 
+// Firebase Analytics
+import { logEvent } from "firebase/analytics";
+import analytics from "../firebase";
+
 type Props = {
   score: number;
   onRestart: () => void;
@@ -19,7 +23,6 @@ const ResultPage: React.FC<Props> = ({ score, onRestart }) => {
   const resultRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Auto-scroll to result
     resultRef.current?.scrollIntoView({ behavior: "smooth" });
   }, []);
 
@@ -29,6 +32,9 @@ const ResultPage: React.FC<Props> = ({ score, onRestart }) => {
     const canvas = await html2canvas(element);
     const dataUrl = canvas.toDataURL("image/png");
 
+    // Log share event
+    logEvent(analytics, "share_clicked", { method: "save_image" });
+
     const link = document.createElement("a");
     link.href = dataUrl;
     link.download = "gym_purity_result.png";
@@ -37,6 +43,10 @@ const ResultPage: React.FC<Props> = ({ score, onRestart }) => {
 
   const copyLink = async () => {
     await navigator.clipboard.writeText("https://yourapp.com");
+
+    // Log share event
+    logEvent(analytics, "share_clicked", { method: "copy_link" });
+
     alert("Link copied to clipboard!");
   };
 
@@ -60,7 +70,7 @@ const ResultPage: React.FC<Props> = ({ score, onRestart }) => {
         📲 Save this image and post it to your Instagram Story with #GymPurityTest!
       </p>
 
-      <button onClick={downloadImage} style={{marginRight: "2rem"}}>📸 Save Result Image</button>
+      <button onClick={downloadImage} style={{ marginRight: "2rem" }}>📸 Save Result Image</button>
       <button onClick={copyLink}>📤 Copy Link to Share</button>
       <div></div>
       <button onClick={onRestart}>🔁 Retake Quiz</button>
