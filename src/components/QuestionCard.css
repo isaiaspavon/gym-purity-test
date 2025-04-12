@@ -1,0 +1,52 @@
+.question-card {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+    background-color: #2a2a2a;
+    transition: background 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .question-card:hover {
+    background-color: #3a3a3a;
+  }
+  
+  .question-index {
+    width: 2rem;
+    text-align: right;
+    color: #ccc;
+  }
+  
+  .question-card input[type="checkbox"] {
+    display: none;
+  }
+  
+  .custom-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ff3c3c;
+    border-radius: 4px;
+    position: relative;
+  }
+  
+  .question-card input[type="checkbox"]:checked + .custom-checkbox::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    width: 5px;
+    height: 10px;
+    border: solid #ff3c3c;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  .question-text {
+    color: #f0f0f0;
+    font-size: 1.05rem;
+    user-select: none;
+  }
+  

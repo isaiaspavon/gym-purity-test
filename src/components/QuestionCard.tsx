@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import "./QuestionCard.css"; // 👈 make sure this CSS file exists
 
 type Props = {
   question: string;
@@ -9,25 +10,20 @@ type Props = {
 
 const QuestionCard: React.FC<Props> = ({ question, index, onChange }) => {
   return (
-    <motion.div
+    <motion.label
       className="question-card"
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.2 }}
-      style={{
-        display: "flex",
-        alignItems: "center",
-        gap: "0.5rem",
-        margin: "0.5rem 0",
-      }}
     >
-      <span style={{ width: "2rem", textAlign: "right" }}>{index + 1}.</span>
+      <span className="question-index">{index + 1}.</span>
       <input
         type="checkbox"
         onChange={(e) => onChange(e.target.checked, question)}
       />
-      <label>{question}</label>
-    </motion.div>
+      <span className="custom-checkbox" />
+      <span className="question-text">{question}</span>
+    </motion.label>
   );
 };
 

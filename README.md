@@ -82,4 +82,3 @@ Created using **React + Vite + TypeScript** with **Firebase Analytics**, styled 
 
 Made with 💪 by [@IsaiasPavon](https://github.com/isaiaspavon)  
 Built for lifters, degenerates, and memers.
-"""
