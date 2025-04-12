@@ -19,8 +19,15 @@ const QuizPage: React.FC<Props> = ({ onFinish }) => {
     });
   }, []);
 
-  const handleChange = (checked: boolean) => {
+  const handleChange = (checked: boolean, question: string) => {
     setSelectedCount((prev) => prev + (checked ? 1 : -1));
+
+    if (checked) {
+      logEvent(analytics, "question_checked", {
+        question,
+        checked_at: new Date().toISOString(),
+      });
+    }
   };
 
   const handleFinish = () => {
@@ -40,11 +47,18 @@ const QuizPage: React.FC<Props> = ({ onFinish }) => {
       <h2 className="branding">The Gym Purity Test</h2>
       <p className="subtagline">How unhinged is your fitness journey?</p>
 
-      <p>{selectedCount} / {gymQuestions.length} questions checked</p>
+      <p>
+        {selectedCount} / {gymQuestions.length} questions checked
+      </p>
       <progress value={selectedCount} max={gymQuestions.length}></progress>
 
       {gymQuestions.map((q, i) => (
-        <QuestionCard key={i} index={i} question={q} onChange={handleChange} />
+        <QuestionCard
+          key={i}
+          index={i}
+          question={q}
+          onChange={handleChange}
+        />
       ))}
       <button onClick={handleFinish}>Finish Quiz</button>
     </div>
