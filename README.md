@@ -1,54 +1,85 @@
-# React + TypeScript + Vite
+# 💀 GYM PURITY TEST 💪  
+> *How unhinged is your fitness journey?*
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Gym Banner](https://yourapp.com/preview-banner.png) <!-- Optional: Replace with screenshot or banner -->
 
-Currently, two official plugins are available:
+## 🚀 What is this?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The **Gym Purity Test** is a degenerate, hilarious web app inspired by the Rice Purity Test — but for gym rats. Answer 100 increasingly chaotic gym-related questions to see just how deep in the bro culture you are 😈
 
-## Expanding the ESLint configuration
+Created using **React + Vite + TypeScript** with **Firebase Analytics**, styled for viral sharing on Instagram/Snapchat.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🎯 Live Demo
+
+🌐 [Try the test now](https://your-deployed-url.vercel.app)
+
+---
+
+## 📸 Screenshots
+
+| Mobile Preview | Result Card |
+|----------------|-------------|
+| ![Mobile](https://yourapp.com/mobile-preview.png) | ![Result](https://yourapp.com/result-card-preview.png) |
+
+---
+
+## 🛠️ Built With
+
+- ⚛️ React + Vite + TypeScript
+- 🔥 Firebase Analytics
+- 🖼️ html2canvas (for shareable results)
+- 🎉 Framer Motion + Confetti
+- ❤️ Styled for IG/Snap Story sharing
+
+---
+
+## 📊 Firebase Analytics Events Tracked
+
+- `quiz_started`
+- `quiz_completed` (with score)
+- `question_checked` (per question)
+- `share_clicked` (image download, link copied)
+
+---
+
+## 📁 Folder Structure
+
+```bash
+/src
+  ├── assets/            # Images, logo, share previews
+  ├── components/        # QuestionCard, ConfettiBurst
+  ├── pages/             # QuizPage, ResultPage
+  ├── data/              # gymQuestions.ts
+  ├── firebase.ts        # Firebase config + analytics
+  ├── App.tsx            # Routing logic
+  └── main.tsx           # React root
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ✨ Features
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- 100 savage & relatable gym questions
+- IG-ready vertical result card
+- Confetti celebration on finish
+- Real-time Firebase Analytics tracking
+- Mobile-optimized layout
+- Theme toggle (dark/light)
+- Clean, reactive UI
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+---
+
+## 🙌 Future Plans
+
+- [ ] Firestore leaderboard for most-degenerate cities
+- [ ] Share-to-Story integration for mobile
+- [ ] Sponsor placement (YoungLA? Darc Sport?)
+- [ ] A/B testing for result screen design
+
+---
+
+## 🤝 Shoutout
+
+Made with 💪 by [@IsaiasPavon](https://github.com/isaiaspavon)  
+Built for lifters, degenerates, and memers.
+"""
