@@ -224,3 +224,11 @@ body, .question-card, .result-card, button {
 .result-card p {
   font-size: 1.6rem;
 }
+
+/* Scroll you down button*/
+/*.difficult-button {
+  margin-left: 2rem;
+  padding-top: 0.57rem;
+  padding-bottom: 0.57rem;
+  
+}*/

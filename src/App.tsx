@@ -19,10 +19,21 @@ function App() {
     setDarkMode(!darkMode);
   };
 
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="App">
       <button onClick={toggleDarkMode}>
         Toggle {darkMode ? "Light" : "Dark"} Mode
+      </button>
+
+      <button onClick={scrollToBottom} style={{marginLeft:"1.25rem"}}>
+        Skip to Bottom
       </button>
 
       {score === null ? (

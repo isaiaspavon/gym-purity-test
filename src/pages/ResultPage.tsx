@@ -22,6 +22,13 @@ const getPersonality = (score: number): string => {
   return "Full-Send Degenerate 😈";
 };
 
+const getBadge = (score: number): string => {
+  if (score > 90) return "/public/assets/badge_virgin.png";
+  if (score > 70) return "/public/assets/badge_warrior.png";
+  if (score > 40) return "/public/assets/badge_bro.png";
+  return "/public/assets/badge_demon.png";
+};
+
 const ResultPage: React.FC<Props> = ({ score, onRestart }) => {
   const resultRef = useRef<HTMLDivElement>(null);
 
@@ -65,6 +72,11 @@ const ResultPage: React.FC<Props> = ({ score, onRestart }) => {
         transition={{ duration: 0.6 }}
         
       >
+       <img 
+          src={getBadge(score)} 
+          alt="Badge" 
+          style={{ width: "100px", height: "100px", marginBottom: "1rem" }} 
+        />
         <h2>Your Gym Purity Score</h2>
         <p>{score} </p>
         <h3>{getPersonality(score)}</h3>
