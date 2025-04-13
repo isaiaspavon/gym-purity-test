@@ -12,6 +12,9 @@ type Props = {
   onRestart: () => void;
 };
 
+// const MotionDiv = motion.div as typeof motion.div & React.FC<React.HTMLAttributes<HTMLDivElement>>;
+
+
 const getPersonality = (score: number): string => {
   if (score > 90) return "Gym Virgin 😇";
   if (score > 70) return "Weekend Warrior 🏋️";
@@ -60,6 +63,7 @@ const ResultPage: React.FC<Props> = ({ score, onRestart }) => {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
+        
       >
         <h2>Your Gym Purity Score</h2>
         <p>{score} </p>
