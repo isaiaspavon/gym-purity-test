@@ -43,7 +43,7 @@ function App() {
       )}
 
       <footer style={{ marginTop: "2rem", fontSize: "0.9rem", color: "#777", textAlign: "center" }}>
-        Made with 💪 by @yourhandle • #GymPurityTest
+        Made with 💪 by <a href="https://isaiaspavon.github.io/developer-portfolio/" target="_blank" rel="noopener noreferrer" style={{ color: '#ff3c3c', textDecoration: 'none', fontWeight: 'bold' }}>@isaiaspavon</a> • #GymPurityTest
       </footer>
     </div>
   );
