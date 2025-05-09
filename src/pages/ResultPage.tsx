@@ -25,7 +25,7 @@ const getPersonality = (score: number): string => {
 
 const getBadge = (score: number): string => {
   if (score > 90) return "/assets/badge_virgin.png";
-  if (score > 70) return "/assets/badge_warrior.png";
+  if (score > 70) return "/assets/badge_weekend_warrior.png";
   if (score > 40) return "/assets/badge_bro.png";
   return "/assets/badge_demon.png";
 };
